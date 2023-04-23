@@ -1,4 +1,4 @@
-# SVG-Logo-Generator
+# SVG Logo Generator
 Create simple SVG logos with Node.js
 
 ## User Story
