@@ -1,0 +1,27 @@
+{
+  "name": "svg-logo-generator",
+  "version": "1.0.0",
+  "description": "Create simple SVG logos with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emjkenz/SVG-Logo-Generator.git"
+  },
+  "keywords": [
+    "svg",
+    "logo",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emjkenz/SVG-Logo-Generator/issues"
+  },
+  "homepage": "https://github.com/emjkenz/SVG-Logo-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.5"
+  }
+}
