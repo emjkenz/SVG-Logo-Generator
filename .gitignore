@@ -131,3 +131,4 @@ dist
 
 logo.svg
 .DS_Store
+!examples/*.svg
