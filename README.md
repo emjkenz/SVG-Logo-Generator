@@ -45,7 +45,7 @@ Example 3
 
 To use the SVG generator run `node index.js` to run the program
 
-See example video on how to use it: [Video](https://drive.google.com/file/d/1m3QYc2g-9J1ZyNzcl-FKPDhpn9vGJW7u/view)
+See example video on how to use it: [Video](https://drive.google.com/file/d/15gTB-PEhGN6__EgMr-FCuDcpLNg567BX/view)
 
 ## Test
 
