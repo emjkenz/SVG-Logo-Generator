@@ -35,6 +35,10 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 To use the SVG generator run `node index.js` to run the program
 
+## Test
+
+To run a test on the program use `npm test`
+
 ## Licence
 
 This is licened under the MIT licence
