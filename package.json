@@ -4,7 +4,7 @@
   "description": "Create simple SVG logos with Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/emjkenz/SVG-Logo-Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
