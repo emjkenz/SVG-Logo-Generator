@@ -1,6 +1,9 @@
 // Import Filesystem and Inquirer packages
 const inquirer = require('inquirer');
 const fs = require('fs');
+const {Triangle, Circle, Square} = require('./lib/shapes.js');
+const { Text } = require('./lib/text.js');
+const { SVG } = require('./lib/svg.js');
 
 // Questions for Inquirer
 const questions = [
@@ -30,26 +33,32 @@ const questions = [
 
 const createShape = (shape, shapeColor, text, textColor) => {
     // Create the SVG variable
-    let shapeSVG = '';
+    let shapeSVG = null;
 
     // Create the shape SVG based on the shape type
     switch (shape) {
     case 'circle':
-        shapeSVG = `<circle cx="150" cy="100" r="50" fill="${shapeColor}"/>`;
+        shapeSVG = new Circle();
         break;
     case 'triangle':
-        shapeSVG = `<polygon points="150,50 100,150 200,150" fill="${shapeColor}"/>`;
+        shapeSVG = new Triangle();
         break;
     case 'square':
-        shapeSVG = `<rect x="100" y="50" width="100" height="100" fill="${shapeColor}"/>`;
+        shapeSVG = new Square();
         break;
     }
 
+    // Set the shape color
+    shapeSVG.setColor(shapeColor);
+
     // Create the text part of the SVG
-    const textSVG = `<text x="150" y="100" font-size="48" text-anchor="middle" dy=".3em" fill="${textColor}">${text}</text>`;
+    const textSVG = new Text(text, textColor);
+
+    // Create the full SVG
+    const svg = new SVG(textSVG, shapeSVG);
 
     // Return the full SVG
-    return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">${shapeSVG}${textSVG}</svg>`;
+    return svg.render();
 }
 
 inquirer.prompt(questions).then((answers) => {
